@@ -1,4 +1,4 @@
-package tak.dimmcraft.blocks;
+package tak.dimmcraft.blocks.pack;
 
 import tak.dimmcraft.CommonProxy;
 
@@ -16,6 +16,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 public class SlimeBlock extends Block {
 	
+	/* Loads the block against BlockLoader */
 	public static void loadBlock (FMLInitializationEvent event) {
 		
 		final Block slimeBlock = new SlimeBlock(500, 0, Material.ground)
@@ -29,6 +30,7 @@ public class SlimeBlock extends Block {
 		crafting(slimeBlock);
 	}
 	
+	/* Handles crafting up to this tier */
 	public static void crafting (Block slimeBlock) {
 		
 		ItemStack slimeballStack = new ItemStack(Item.slimeBall);
@@ -45,6 +47,7 @@ public class SlimeBlock extends Block {
 		super(id, texture, material);
 	}
 	
+	/* Constructs the block against Block */
 	@Override
 	public String getTextureFile () {
 		return CommonProxy.BLOCKS_PNG;
