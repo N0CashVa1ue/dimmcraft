@@ -1,6 +1,7 @@
 package tak.dimmcraft.blocks.pack;
 
 import tak.dimmcraft.CommonProxy;
+import tak.dimmcraft.blocks.PackageBlock;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -14,40 +15,33 @@ import net.minecraft.src.Material;
 
 import net.minecraftforge.common.MinecraftForge;
 
-public class SlimeBlock extends Block {
+public class SlimeBlock extends PackageBlock {
 	
-	/* Loads the block against BlockLoader */
+//	Loads the block against BlockLoader
 	public static void loadBlock (FMLInitializationEvent event) {
 		
 		final Block slimeBlock = new SlimeBlock(500, 0, Material.ground)
 		.setHardness(0.5F).setStepSound(Block.soundGravelFootstep)
 		.setBlockName("slimeBlock").setCreativeTab(CreativeTabs.tabDecorations);
 		
-		LanguageRegistry.addName(slimeBlock, "Slime Block");
-		MinecraftForge.setBlockHarvestLevel(slimeBlock, "shovel", 0);
-		GameRegistry.registerBlock(slimeBlock);
-		
+		PackageBlock.registerBlock(slimeBlock, "Slime Block", "shovel");
 		crafting(slimeBlock);
 	}
 	
-	/* Handles crafting up to this tier */
+//	Handles crafting up to this tier
 	public static void crafting (Block slimeBlock) {
 		
 		ItemStack slimeballStack = new ItemStack(Item.slimeBall);
 		ItemStack slimeBlockStack = new ItemStack(slimeBlock);
 		
-		GameRegistry.addShapelessRecipe(slimeBlockStack,
-				slimeballStack, slimeballStack, slimeballStack,
-				slimeballStack);
-		
-		GameRegistry.addShapelessRecipe(new ItemStack(Item.slimeBall, 4), slimeBlockStack);
+		PackageBlock.recipeSetup(slimeBlockStack, slimeballStack, Item.slimeBall);
 	}
 	
+//	Constructs the block against Block
 	public SlimeBlock (int id, int texture, Material material) {
 		super(id, texture, material);
 	}
 	
-	/* Constructs the block against Block */
 	@Override
 	public String getTextureFile () {
 		return CommonProxy.BLOCKS_PNG;

@@ -1,11 +1,6 @@
 package tak.dimmcraft;
 
-import java.io.File;
-import java.util.logging.Level;
 
-import net.minecraftforge.common.Configuration;
-
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -17,7 +12,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid = "DimmCraft", name="DimmCraft", version = "1.3.2.1")
+@Mod(modid = "DimmCraft", name="DimmCraft", version = "1.3.2:0.1")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class DimmCraft {
 	
@@ -39,7 +34,7 @@ public class DimmCraft {
 	@Init
 	public void load(FMLInitializationEvent event) {
 		
-		BlockLoader.blockLoader(event);
+		BlockHandler.blockLoader(event);
 		
 		proxy.registerRenderers();
 	}
@@ -47,12 +42,6 @@ public class DimmCraft {
 	@PostInit
 	public void postInit(FMLPostInitializationEvent event) {
 		
-		/*if (tak.dimmcraft.blocks.DimmFurnace.isValid() == true) {
-			
-			FMLLog.log(Level.INFO, "DimmFurnace is ON!");
-		} else {
-			
-			FMLLog.log(Level.INFO, "DimmFurnace is OFF!");
-		}*/
+		
 	}
 }
