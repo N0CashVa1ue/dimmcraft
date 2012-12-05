@@ -1,7 +1,7 @@
 package tak.dimmcraft.blocks;
 
 
-import tak.dimmcraft.RecipeHandler;
+import tak.dimmcraft.handlers.RecipeHandler;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;

@@ -2,9 +2,9 @@ package tak.dimmcraft.conf;
 
 import net.minecraftforge.common.Configuration;
 
-public class ConfPackageBlocks {
+public class ConfPackageItems {
 	
-	public static boolean PackageBlocks;
+	public static boolean PackageItems;
 
 	public static void configLoad (Configuration cfg) {
 		
@@ -13,6 +13,6 @@ public class ConfPackageBlocks {
 	
 	private static void configGeneral (Configuration cfg) {
 		
-		PackageBlocks = cfg.get(Configuration.CATEGORY_GENERAL, "PackageBlocks", true).getBoolean(true);
+		PackageItems = cfg.get(Configuration.CATEGORY_GENERAL, "PackageItems", true).getBoolean(true);
 	}
 }

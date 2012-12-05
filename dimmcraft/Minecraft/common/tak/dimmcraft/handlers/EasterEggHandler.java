@@ -1,4 +1,4 @@
-package tak.dimmcraft;
+package tak.dimmcraft.handlers;
 
 public class EasterEggHandler {
 

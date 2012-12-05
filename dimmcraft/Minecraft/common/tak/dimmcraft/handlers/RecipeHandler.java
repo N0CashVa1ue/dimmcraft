@@ -1,4 +1,4 @@
-package tak.dimmcraft;
+package tak.dimmcraft.handlers;
 
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;

@@ -1,6 +1,10 @@
 package tak.dimmcraft;
 
 
+import tak.dimmcraft.handlers.BlockHandler;
+import tak.dimmcraft.handlers.ConfHandler;
+import tak.dimmcraft.handlers.ItemHandler;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -17,11 +21,11 @@ import cpw.mods.fml.common.network.NetworkMod;
 public class DimmCraft {
 	
 	
-	// The instance of your mod that Forge uses.
+//	The instance of your mod that Forge uses.
 	@Instance("DimmCraft")
 	public static DimmCraft instance;
 	
-	// Says where the client and server 'proxy' code is loaded.
+//	Says where the client and server 'proxy' code is loaded.
 	@SidedProxy(clientSide="tak.dimmcraft.client.ClientProxy", serverSide="tak.dimmcraft.CommonProxy")
 	public static CommonProxy proxy;
 	
@@ -35,6 +39,7 @@ public class DimmCraft {
 	public void load(FMLInitializationEvent event) {
 		
 		BlockHandler.blockLoader(event);
+		ItemHandler.itemLoader(event);
 		
 		proxy.registerRenderers();
 	}
