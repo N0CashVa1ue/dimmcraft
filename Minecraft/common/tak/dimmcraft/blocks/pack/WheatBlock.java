@@ -6,7 +6,7 @@ import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.Material;
 import net.minecraftforge.common.MinecraftForge;
-import tak.dimmcraft.CommonProxy;
+import tak.dimmcraft.DimmCraftCommonProxy;
 import tak.dimmcraft.blocks.PackageBlock;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -41,6 +41,6 @@ public class WheatBlock extends PackageBlock {
 	
 	@Override
 	public String getTextureFile () {
-		return CommonProxy.BLOCKS_PNG;
+		return DimmCraftCommonProxy.BLOCKS_PNG;
 	}
 }

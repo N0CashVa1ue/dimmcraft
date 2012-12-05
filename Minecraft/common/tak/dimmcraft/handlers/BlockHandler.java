@@ -18,13 +18,13 @@ public class BlockHandler {
 		// Ore Blocks
 		
 //		Could crash client if config doesn't match server
-		if (ConfPackageItems.PackageItems == true) {
+		if (ConfPackageItems.PackageBlocks == true) {
 			
-			SlimeBlock.loadBlock(event);
-			BoneBlock.loadBlock(event);
+//			SlimeBlock.loadBlock(event);
+//			BoneBlock.loadBlock(event);
 			RedstoneBlock.loadBlock(event);
-			SugarcaneBlock.loadBlock(event);
-			WheatBlock.loadBlock(event);
+//			SugarcaneBlock.loadBlock(event);
+//			WheatBlock.loadBlock(event);
 		}
 	}
 }

@@ -5,7 +5,7 @@ import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.Material;
-import tak.dimmcraft.CommonProxy;
+import tak.dimmcraft.DimmCraftCommonProxy;
 import tak.dimmcraft.blocks.PackageBlock;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 
@@ -39,6 +39,6 @@ public class CoalBlock extends PackageBlock {
 	
 	@Override
 	public String getTextureFile () {
-		return CommonProxy.BLOCKS_PNG;
+		return DimmCraftCommonProxy.BLOCKS_PNG;
 	}
 }

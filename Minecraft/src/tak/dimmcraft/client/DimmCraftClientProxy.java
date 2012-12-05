@@ -1,9 +1,9 @@
 package tak.dimmcraft.client;
 
 import net.minecraftforge.client.MinecraftForgeClient;
-import tak.dimmcraft.CommonProxy;
+import tak.dimmcraft.DimmCraftCommonProxy;
 
-public class ClientProxy extends CommonProxy {
+public class DimmCraftClientProxy extends DimmCraftCommonProxy {
 	
 	@Override
 	public void registerRenderers() {

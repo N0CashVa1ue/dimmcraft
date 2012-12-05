@@ -1,6 +1,6 @@
 package tak.dimmcraft.blocks.pack;
 
-import tak.dimmcraft.CommonProxy;
+import tak.dimmcraft.DimmCraftCommonProxy;
 import tak.dimmcraft.blocks.PackageBlock;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -44,7 +44,7 @@ public class SlimeBlock extends PackageBlock {
 	
 	@Override
 	public String getTextureFile () {
-		return CommonProxy.BLOCKS_PNG;
+		return DimmCraftCommonProxy.BLOCKS_PNG;
 	}
 
 }
