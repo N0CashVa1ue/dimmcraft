@@ -4,7 +4,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 
 import tak.dimmcraft.blocks.pack.BoneBlock;
 import tak.dimmcraft.blocks.pack.RedstoneBlock;
-import tak.dimmcraft.blocks.pack.SlimeBlock;
 import tak.dimmcraft.blocks.pack.SugarcaneBlock;
 import tak.dimmcraft.blocks.pack.WheatBlock;
 
@@ -20,7 +19,6 @@ public class BlockHandler {
 //		Could crash client if config doesn't match server
 		if (ConfPackageItems.PackageBlocks == true) {
 			
-//			SlimeBlock.loadBlock(event);
 //			BoneBlock.loadBlock(event);
 			RedstoneBlock.loadBlock(event);
 //			SugarcaneBlock.loadBlock(event);

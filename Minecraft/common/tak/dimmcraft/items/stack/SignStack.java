@@ -10,7 +10,7 @@ public class SignStack {
 		
 		Class sign = net.minecraft.src.Item.class;
 		
-		Field f = sign.getDeclaredField("maxStackSize");
+//		Field f = sign.getDeclaredField("maxStackSize");
 		
 	}
 }

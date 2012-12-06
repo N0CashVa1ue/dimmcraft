@@ -1,5 +1,12 @@
 package tak.dimmcraft.items;
 
-public class PackageItem {
+import net.minecraft.src.Item;
+
+public class PackageItem extends Item {
+
+	public PackageItem(int par1) {
+		
+		super(par1);
+	}
 
 }
