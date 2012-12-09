@@ -13,6 +13,6 @@ public class ConfDimmFurnace {
 	
 	private static void configGeneral (Configuration cfg) {
 		
-		DimmFurnaceStatus = cfg.get(Configuration.CATEGORY_GENERAL, "DimmFurnace", true).getBoolean(true);
+//		DimmFurnaceStatus = cfg.get(Configuration.CATEGORY_GENERAL, "DimmFurnace", true).getBoolean(true);
 	}
 }

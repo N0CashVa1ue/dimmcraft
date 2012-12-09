@@ -2,6 +2,7 @@ package tak.dimmcraft.items.pack;
 
 import tak.dimmcraft.DimmCraftCommonProxy;
 import tak.dimmcraft.blocks.PackageBlock;
+import tak.dimmcraft.conf.ConfPackageItems;
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
@@ -15,7 +16,7 @@ public class SlimeCubeChunk extends Item {
 //	Loads the Item into Minecraft
 	public static void loadItem(FMLInitializationEvent event) {
 		
-		slimeCubeChunk = (new SlimeCubeChunk(1800)).setIconIndex(0).setItemName("slimeCubeChunk");
+		slimeCubeChunk = (new SlimeCubeChunk(ConfPackageItems.SlimeCube)).setIconIndex(0).setItemName("slimeCubeChunk");
 		LanguageRegistry.addName(slimeCubeChunk, "Slime Cube");
 		
 		crafting(slimeCubeChunk);

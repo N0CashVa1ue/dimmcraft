@@ -10,6 +10,8 @@ import net.minecraftforge.common.MinecraftForge;
 
 import tak.dimmcraft.DimmCraftCommonProxy;
 import tak.dimmcraft.blocks.PackageBlock;
+import tak.dimmcraft.conf.ConfPackageItems;
+import tak.dimmcraft.handlers.BlockHandler;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -20,11 +22,11 @@ public class RedstoneBlock extends PackageBlock {
 //	Loads the block against BlockLoader
 	public static void loadBlock (FMLInitializationEvent event) {
 		
-		final Block redstoneBlock = new RedstoneBlock(502, 2, Material.ground)
+		final Block redstoneBlock = new RedstoneBlock(ConfPackageItems.RedstoneBlock, 2, Material.ground)
 		.setHardness(0.5F).setStepSound(Block.soundGravelFootstep)
 		.setBlockName("redstoneBlock").setCreativeTab(CreativeTabs.tabDecorations);
 		
-		PackageBlock.registerBlock(redstoneBlock, "Redstone Block", "shovel");
+		BlockHandler.registerBlock(redstoneBlock, "Redstone Block", "pickaxe", 2);
 		crafting(redstoneBlock);
 	}
 	
@@ -39,11 +41,13 @@ public class RedstoneBlock extends PackageBlock {
 	
 //	Constructs the block against Block
 	public RedstoneBlock (int id, int texture, Material material) {
+		
 		super(id, texture, material);
 	}
 	
 	@Override
 	public String getTextureFile () {
+		
 		return DimmCraftCommonProxy.BLOCKS_PNG;
 	}
 }
