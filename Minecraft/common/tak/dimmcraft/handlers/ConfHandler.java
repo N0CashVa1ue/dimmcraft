@@ -3,6 +3,7 @@ package tak.dimmcraft.handlers;
 import java.util.logging.Level;
 
 import tak.dimmcraft.conf.ConfDimmFurnace;
+import tak.dimmcraft.conf.ConfIndiclarus;
 import tak.dimmcraft.conf.ConfPackageItems;
 
 import net.minecraftforge.common.Configuration;
@@ -23,6 +24,7 @@ public class ConfHandler {
 			
 			ConfDimmFurnace.configLoad(cfg);
 			ConfPackageItems.configLoad(cfg);
+			ConfIndiclarus.configLoad(cfg);
 		} catch (Exception e) {
 			
 			FMLLog.log(Level.SEVERE, e, "DimmCraft failed to load config file.");

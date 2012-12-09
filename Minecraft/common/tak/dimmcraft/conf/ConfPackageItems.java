@@ -8,7 +8,6 @@ public class ConfPackageItems {
 	public static boolean PackageBlocks;
 	
 	public static int SlimeCube;
-	
 	public static int RedstoneBlock;
 
 	public static void configLoad (Configuration cfg) {
