@@ -3,8 +3,8 @@
   "modid": "DimmCraft",
   "name": "DimmCraft",
   "description": "A Subtle Minecraft Mod aimed at being Modular and Player Driven",
-  "version": "1.3.2.1",
-  "mcversion": "1.3.2",
+  "version": "0.1",
+  "mcversion": "1.4.5",
   "url": "http://github.com/TakSuyu/dimmcraft",
   "updateUrl": "",
   "authors": [
@@ -15,7 +15,7 @@
   "screenshots": [
   ],
   "parent":"",
-  "dependencies": [ Forge 303+
+  "dependencies": [ Forge 413+
   ]
 }
 ]
